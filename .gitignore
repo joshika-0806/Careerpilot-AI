@@ -1,0 +1,16 @@
+# Credentials & Secrets
+firebase-key.json
+.env
+.env.local
+
+# Dependencies
+node_modules/
+backend/venv/
+__pycache__/
+
+# Build & Instance outputs
+dist/
+build/
+backend/instance/
+uploads/
+backend/uploads/

@@ -1,0 +1,32 @@
+{
+    "AI/ML Engineer": [
+        "python",
+        "machine learning",
+        "deep learning",
+        "tensorflow",
+        "pytorch",
+        "sql",
+        "docker",
+        "git",
+        "numpy",
+        "pandas"
+    ],
+    "Data Scientist": [
+        "python",
+        "statistics",
+        "machine learning",
+        "sql",
+        "data analysis",
+        "pandas",
+        "numpy"
+    ],
+    "Backend Developer": [
+        "python",
+        "flask",
+        "django",
+        "sql",
+        "rest api",
+        "docker",
+        "git"
+    ]
+}

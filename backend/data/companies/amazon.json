@@ -1,0 +1,174 @@
+{
+  "name": "Amazon",
+  "difficulty": "Hard",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "LRU Cache Implementation with O(1) Time Complexity",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design a Data Structure for Least Recently Used (LRU) Cache. It should support get(key) and put(key, value) operations in O(1) average time complexity. Handle capacity limits, concurrent eviction, and null edge cases cleanly.",
+          "hint": "Combine a Hash Map with a Doubly Linked List to achieve O(1) lookup and O(1) node repositioning."
+        },
+        {
+          "title": "Amazon Fulfillment Center Package Routing & Graph Cycle Detection",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "In an automated warehouse conveyor system, package dependencies form a directed graph. Write an efficient algorithm to detect cyclic dependencies among N items and output a valid execution sequence if no cycles exist.",
+          "hint": "Use Topological Sort (Kahn's Algorithm using indegrees or DFS with 3-state visited colors: unvisited, visiting, visited)."
+        },
+        {
+          "title": "K Closest Warehouse Locations (Reorder & Min-Heap)",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given an array of warehouse coordinates (x, y) relative to a delivery point (0, 0), return the K closest warehouses to the delivery origin using Euclidean distance. Optimize for optimal time complexity when K << N.",
+          "hint": "Use a Max-Heap of size K (O(N log K)) or QuickSelect (O(N) average time complexity)."
+        },
+        {
+          "title": "Java Memory Management & Garbage Collector Tuning",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Compare G1GC and ZGC in high-throughput microservices. Explain how stop-the-world pauses affect p99 latency in real-time order processing systems, and how to avoid memory leaks caused by static references or unclosed connections.",
+          "hint": "Analyze heap region allocation, garbage collection phases, weak references, and thread pool lifecycle management."
+        },
+        {
+          "title": "OOP Design for Multi-Tier Warehouse Inventory System",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Apply Object-Oriented Principles (Encapsulation, Inheritance, Polymorphism, and SOLID) to design an extensible system for managing items across multiple distribution centers, supporting dynamic strategy-based pricing and reservation locks.",
+          "hint": "Use the Strategy Pattern for pricing algorithms and the Factory / Singleton patterns for inventory manager instances."
+        },
+        {
+          "title": "SQL Indexing & Transaction Isolation in High-Volume Databases",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A high-traffic e-commerce database encounters deadlocks during simultaneous inventory updates. Write a query strategy using appropriate isolation levels and indexing (B-Tree vs Hash) to guarantee ACID compliance without bottlenecking throughput.",
+          "hint": "Consider SELECT ... FOR UPDATE, optimistic locking with versioning columns, and Composite B-Tree indexing on filtering keys."
+        },
+        {
+          "title": "DBMS B+ Tree vs B-Tree Node Balancing & IO Overhead",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Explain why relational database storage engines (like InnoDB) use B+ Trees instead of standard B-Trees for disk page indexing. How does leaf node linking reduce disk I/O operations during range queries?",
+          "hint": "B+ Trees store data pointers only in leaf nodes, maximizing branching factor in internal nodes and allowing sequential disk sweeps."
+        },
+        {
+          "title": "Operating Systems Process Synchronization & Deadlock Prevention",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Two order-processing worker threads share resources A and B. Detail how deadlocks occur under circular wait, and implement a deadlock avoidance mechanism using Banker's Algorithm or strict resource ordering locks.",
+          "hint": "Enforce a globally deterministic lock acquisition order or use mutex try-locks with back-off mechanisms."
+        },
+        {
+          "title": "TCP vs UDP & Congestion Control in Low-Latency Streaming",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Analyze TCP 3-way handshake, SYN floods, head-of-line blocking, and window scaling vs UDP for live telemetry streaming. How does TCP Reno/BBR adjust congestion windows under packet loss?",
+          "hint": "Focus on reliable transport trade-offs, retransmission timeouts (RTO), and socket buffer configurations."
+        },
+        {
+          "title": "Basic System Design: Distributed Key-Value Store & Rate Limiter",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design a scalable API Rate Limiter that allows a maximum of 100 requests per minute per user across a cluster of API servers. Address race conditions, distributed synchronization, and fail-open strategies.",
+          "hint": "Compare Sliding Window Counter vs Token Bucket implemented using Redis Lua scripts or atomic operations."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Logistics Route Speed & Distance Optimization",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "A delivery vehicle travels from Hub A to Hub B at an average speed of 60 km/h, and returns along the same route at 40 km/h due to traffic. If the total round trip takes 5 hours, what is the distance between Hub A and Hub B?",
+          "options": ["120 km", "144 km", "150 km", "180 km"],
+          "hint": "Calculate the harmonic mean of the speeds or set up the equation (D/60) + (D/40) = 5."
+        },
+        {
+          "title": "Combinatorics & Order Batching Permutations",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "In a fulfillment center, 6 distinct packages are to be assigned to 3 different delivery vans such that every van receives at least one package. In how many distinct ways can the packages be distributed?",
+          "options": ["540", "360", "729", "546"],
+          "hint": "Use Stirling numbers of the second kind or Inclusion-Exclusion Principle: 3^6 - 3*(2^6) + 3*(1^6)."
+        },
+        {
+          "title": "Probability & Quality Control Inspection",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A quality control scanner tests packages. 5% of packages are defective. The scanner correctly flags defective items 98% of the time, but has a false positive rate of 2% on non-defective items. If a package is flagged, what is the probability that it is actually defective?",
+          "options": ["72.1%", "83.8%", "91.2%", "98.0%"],
+          "hint": "Apply Bayes' Theorem: P(Defective|Flagged) = (0.05 * 0.98) / [(0.05 * 0.98) + (0.95 * 0.02)]."
+        },
+        {
+          "title": "Profit & Loss Margin Calculation",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "An item is marked up by 50% above its cost price. A discount of 20% is offered on the marked price. If a tax of 10% is then applied on the discounted price, what is the net percentage profit earned on the cost price?",
+          "options": ["20%", "32%", "26%", "30%"],
+          "hint": "Let CP = 100. Marked Price = 150. Discounted = 120. Final selling price before tax profit analysis = 120 - 100 = 20% or consider revenue net of tax."
+        },
+        {
+          "title": "Work & Pipe Filling Capacity",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Two automated sorting belts A and B can process a batch of items in 12 hours and 18 hours respectively. If both belts are operated together for 4 hours, and then belt A shuts down, how many remaining hours will belt B take to finish the batch?",
+          "options": ["8 hours", "10 hours", "12 hours", "14 hours"],
+          "hint": "Combined rate = 1/12 + 1/18 = 5/36 per hour. Work completed in 4 hrs = 20/36. Remaining work = 16/36. Time for B = (16/36) / (1/18)."
+        },
+        {
+          "title": "Logical Reasoning & Sequence Pattern Analysis",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "Find the missing number in the sequence: 7, 14, 30, 56, 93, ?",
+          "options": ["142", "144", "148", "152"],
+          "hint": "Examine the second differences between terms: +7, +16, +26, +37... Differences are +9, +10, +11..."
+        }
+      ]
+    },
+    {
+      "name": "Behavioral Questions",
+      "questions": [
+        {
+          "title": "Handling Difficult Situations & Conflict",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a time you handled a difficult situation under high pressure or tight deadlines.",
+          "hint": "Structure your response using STAR: Situation, Task, Action, Result. Highlight composure and problem-solving."
+        },
+        {
+          "title": "Disagree and Commit with Teammate",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Describe a time you disagreed with a teammate or technical lead on a key architectural choice.",
+          "hint": "Focus on data-driven discussion, professional respect, and how you supported the final outcome."
+        },
+        {
+          "title": "Taking Ownership & Driving Impact",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a project where you took complete ownership beyond your assigned responsibilities.",
+          "hint": "Demonstrate proactivity, overcoming obstacles without waiting to be told, and measurable impact."
+        },
+        {
+          "title": "Learning from Failure & Resilience",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Describe a failure or mistake you made in a project and what you learned from it.",
+          "hint": "Be honest about the mistake, explain immediate remediation, and detail permanent preventative measures."
+        },
+        {
+          "title": "Customer Obsession & Problem Solving",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a time you solved a complex customer problem or advocated for user experience.",
+          "hint": "Show deep understanding of customer pain points and how your technical solution improved user trust."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Backend secrets
+firebase-key.json
+*.service-account.json
+.env
+__pycache__/
+instance/
+uploads/
+venv/
+*.db

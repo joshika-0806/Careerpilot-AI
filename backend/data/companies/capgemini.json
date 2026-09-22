@@ -1,0 +1,159 @@
+{
+  "name": "Capgemini",
+  "difficulty": "Medium",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Check if String is Palindrome (Ignoring Case)",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write an efficient function to check whether a given string is a palindrome, ignoring uppercase/lowercase differences and non-alphanumeric characters.",
+          "hint": "Use two pointers (one starting at index 0 and one at length-1) moving towards the center."
+        },
+        {
+          "title": "Find Second Largest Element in an Array",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Given an integer array, find the second largest element in a single pass without sorting the array. Handle edge cases like duplicates or arrays with fewer than two unique elements.",
+          "hint": "Maintain two tracking variables: max1 and max2. Update max2 whenever a number is strictly between max1 and max2."
+        },
+        {
+          "title": "Java Abstract Class vs Interface Differences",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain the key differences between an abstract class and an interface in Java (including default methods introduced in Java 8 and private methods in Java 9). When should you choose one over the other?",
+          "hint": "Focus on multiple inheritance of type vs implementation, field modifiers (final static), and design contract intent."
+        },
+        {
+          "title": "Four Pillars of Object-Oriented Programming (OOP)",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Define Encapsulation, Abstraction, Inheritance, and Polymorphism. Give a practical real-world software example illustrating Method Overriding vs Method Overloading.",
+          "hint": "Overloading is compile-time (same method name, different parameters); Overriding is runtime (subclass redefines superclass method)."
+        },
+        {
+          "title": "SQL INNER JOIN vs LEFT JOIN Query",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Given two tables, Employees (emp_id, emp_name, dept_id) and Departments (dept_id, dept_name), write a query to fetch all employee names along with their department names, including employees who are not currently assigned to any department.",
+          "hint": "Use LEFT JOIN on Employees and Departments using dept_id."
+        },
+        {
+          "title": "DBMS Primary Key vs Unique Key vs Foreign Key",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain the difference between Primary Key, Unique Key, and Foreign Key constraints in relational databases. Can a table have multiple Unique keys and multiple Foreign keys?",
+          "hint": "A table has exactly 1 Primary Key (no NULLs allowed). Unique keys permit one NULL value. Multiple Foreign keys can reference different parent tables."
+        },
+        {
+          "title": "Operating Systems Process vs Thread & Multithreading Basics",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "What is the difference between a Process and a Thread? Explain memory sharing between threads of the same process and why context switching between threads is faster than between processes.",
+          "hint": "Threads share text, data, and heap memory spaces, but maintain independent stacks and register sets."
+        },
+        {
+          "title": "Computer Networks OSI Model Layers & HTTP vs HTTPS",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "List the 7 layers of the OSI model. Explain how HTTP differs from HTTPS and which port numbers are used by default for both protocols.",
+          "hint": "HTTPS adds SSL/TLS encryption over port 443; HTTP operates unencrypted over port 80."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Percentage Increase & Salary Calculation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "An employee's salary is increased by 20% in the first year and then decreased by 10% in the second year. If the current salary is $54,000, what was the initial salary before any changes?",
+          "options": ["$50,000", "$48,000", "$52,000", "$45,000"],
+          "hint": "Let initial salary be S. S * 1.20 * 0.90 = 54000 => S * 1.08 = 54000."
+        },
+        {
+          "title": "Ratios & Team Allocation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "The ratio of male to female developers in a project team is 5:3. If there are 16 more male developers than female developers, what is the total number of developers in the team?",
+          "options": ["64", "48", "56", "72"],
+          "hint": "Let male = 5x and female = 3x. Difference = 2x = 16 => x = 8. Total = 8x = 64."
+        },
+        {
+          "title": "Simple Interest vs Compound Interest",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "The difference between simple interest and compound interest (compounded annually) on a principal amount at 10% per annum for 2 years is $45. What is the principal amount?",
+          "options": ["$4,500", "$5,000", "$4,000", "$3,500"],
+          "hint": "Formula for 2-year difference: Difference = P * (R/100)^2 => 45 = P * (10/100)^2."
+        },
+        {
+          "title": "Time, Speed & Distance Train Problem",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "A train 150 meters long is traveling at a constant speed of 54 km/h. How many seconds will it take to cross a standing platform 200 meters long?",
+          "options": ["23.3 seconds", "25.0 seconds", "20.0 seconds", "28.5 seconds"],
+          "hint": "Total distance = 150 + 200 = 350m. Speed in m/s = 54 * (5/18) = 15 m/s. Time = 350 / 15."
+        },
+        {
+          "title": "Logical Reasoning Letter Series Coding",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "In a certain code language, 'JAVA' is written as 'LCXC'. How is 'CODE' written in that same code language?",
+          "options": ["EQFG", "ERFG", "EFEG", "FPEH"],
+          "hint": "Pattern: Each letter is shifted forward by +2 positions in alphabetical order (J+2=L, A+2=C, V+2=X, A+2=C)."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your educational background, key technical skills, and software projects.",
+          "hint": "Structure as Elevator Pitch: Current status/degree, technical competencies, major project highlight, and professional aspiration."
+        },
+        {
+          "title": "Why Capgemini",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Capgemini specifically?",
+          "hint": "Mention Capgemini's global presence, enterprise IT solutions, continuous learning culture, and digital transformation initiatives."
+        },
+        {
+          "title": "Why Should We Hire You",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should Capgemini hire you over other candidates?",
+          "hint": "Align your strong programming foundation, fast learning ability, adaptability, and positive work ethic with Capgemini's goals."
+        },
+        {
+          "title": "Strengths and Weaknesses",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "What are your core technical/personal strengths and an area of weakness you are working to improve?",
+          "hint": "Pair a strong technical/analytical strength with a genuine weakness along with concrete steps you are taking to overcome it."
+        },
+        {
+          "title": "Willingness to Relocate & Work Shifts",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Are you willing to relocate to different project locations and work in flexible project shifts if required by Capgemini?",
+          "hint": "Express flexibility, enthusiasm for new learning environments, and commitment to project success."
+        },
+        {
+          "title": "Challenging Situation & Problem Resolution",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Describe a challenging situation during your academic or project journey and how you successfully handled it.",
+          "hint": "Use the STAR approach. Focus on problem breakdown, resourcefulness, composure, and positive resolution."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "name": "Zoho",
+  "difficulty": "Hard",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Look-and-Say Sequence Generation",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Implement a function to generate the N-th term of the 'Look-and-Say' sequence. Given term 1 = '1', term 2 = '11', term 3 = '21', term 4 = '1211', term 5 = '111221', compute term N for 1 <= N <= 30 with optimal string handling.",
+          "hint": "Process the previous string term sequentially, counting contiguous identical digits and appending 'count' + 'digit'."
+        },
+        {
+          "title": "Sub-matrix Sum Queries & 2D Prefix Sum Array",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Given an M x N integer matrix and Q query coordinates (r1, c1, r2, c2), compute the sum of all elements within the sub-matrix defined by top-left (r1, c1) and bottom-right (r2, c2). Optimize for O(1) query response time after O(M*N) preprocessing.",
+          "hint": "Build a 2D Prefix Sum array where prefix[i][j] = matrix[i][j] + prefix[i-1][j] + prefix[i][j-1] - prefix[i-1][j-1]."
+        },
+        {
+          "title": "Custom String Tokenizer & Expression Parser without Regex",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Write a custom expression evaluator that parses mathematical expressions containing '+', '-', '*', '/', '(', ')' without using built-in evaluation libraries or regular expressions. Respect operator precedence.",
+          "hint": "Use Shunting-Yard Algorithm with two Stacks: one for values and one for operators."
+        },
+        {
+          "title": "Java Garbage Collection Tuning & Weak Reference Memory Leaks",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Explain how Java handles memory leaks when using ThreadLocal variables or static collections. Compare WeakReference, SoftReference, and PhantomReference in custom caching frameworks.",
+          "hint": "Unremoved ThreadLocal entries persist across thread pool reuse causing memory leaks; SoftReferences are cleared before OOM."
+        },
+        {
+          "title": "SQL Correlated Subquery for N-th Highest Salary per Department",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Write an efficient SQL query to find the 3rd highest paid employee in EACH department without using WINDOW functions (DENSE_RANK or ROW_NUMBER).",
+          "hint": "Use a correlated subquery: SELECT * FROM Employee e1 WHERE 2 = (SELECT COUNT(DISTINCT e2.salary) FROM Employee e2 WHERE e2.dept_id = e1.dept_id AND e2.salary > e1.salary)."
+        },
+        {
+          "title": "DBMS Indexing B-Tree vs Hash Index & Write Amplification",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Explain why Hash Indexes cannot support range queries (BETWEEN, <, >) in relational databases. How does B-Tree node splitting impact write latency in high-ingestion workloads?",
+          "hint": "Hash indexes map keys non-sequentially via hash functions; B-Tree keeps entries sorted maintaining contiguous leaf node pointers."
+        },
+        {
+          "title": "Operating Systems Thread Synchronization Lock-Free Queue",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Detail the mechanics of a Lock-Free MPSC (Multi-Producer Single-Consumer) Queue. How do Atomic Compare-And-Swap (CAS) instructions prevent race conditions without mutex locking overhead?",
+          "hint": "CAS operations update tail pointers atomically in a loop until successful, eliminating thread blocking and context switches."
+        },
+        {
+          "title": "Computer Networks Custom Binary Protocol Design over Socket",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design a custom application-layer binary protocol over TCP socket for streaming telemetry. Detail packet framing, magic header bytes, payload length encoding, and CRC32 checksum verification.",
+          "hint": "Structure fixed-size header: [2 bytes Magic] [2 bytes Command ID] [4 bytes Length] [Payload] [4 bytes Checksum]."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Cryptarithmetic Puzzle Logic",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "In the cryptarithmetic equation SEND + MORE = MONEY, if each letter represents a distinct digit (0-9) and S != 0, M != 0, what is the single digit value represented by the letter 'O'?",
+          "options": ["0", "1", "9", "2"],
+          "hint": "Since S + M produces a carry for 5-digit MONEY, M must be 1. Consequently, S + 1 (+ carry) = 10 + O, yielding O = 0."
+        },
+        {
+          "title": "Clock Angles & Overlapping Hands Calculation",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "At what exact time between 3 o'clock and 4 o'clock will the minute hand and hour hand of a clock coincide precisely?",
+          "options": ["3:16 4/11 minutes", "3:15 minutes", "3:16 2/11 minutes", "3:18 minutes"],
+          "hint": "At 3:00, initial gap = 15 minute spaces. Relative speed = 55/60 minute spaces per minute. Time = 15 / (55/60) = 180/11 = 16 4/11 mins."
+        },
+        {
+          "title": "Pipes, Reservoirs & Leakage Rate Analysis",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "A reservoir is normally filled by a inlet pipe in 8 hours. However, due to a leak at the bottom, it takes 2 extra hours to fill the reservoir. How long will the leak take to empty a full reservoir working alone?",
+          "options": ["40 hours", "36 hours", "48 hours", "30 hours"],
+          "hint": "Inlet rate = 1/8. Combined rate with leak = 1/10. Leak rate = 1/8 - 1/10 = 1/40 per hour."
+        },
+        {
+          "title": "Combinatorics & Chessboard Rectangles",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "How many total rectangles (including squares and non-square rectangles) can be formed on a standard 8x8 chessboard?",
+          "options": ["1,296", "204", "1,092", "1,152"],
+          "hint": "Choose 2 vertical lines out of 9 (9C2 = 36) and 2 horizontal lines out of 9 (9C2 = 36). Total rectangles = 36 * 36 = 1296."
+        },
+        {
+          "title": "Bayesian Probability & Diagnostic Accuracy",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "1 in 1000 server nodes suffers from a silent memory corruption fault. A diagnostic test detects corruption with 99% accuracy when present, but gives a 1% false positive on healthy nodes. If a node tests positive, what is the probability it is actually faulty?",
+          "options": ["~9.0%", "~99.0%", "~50.0%", "~1.0%"],
+          "hint": "Bayes' Theorem: P(Fault|Positive) = (0.001 * 0.99) / [(0.001 * 0.99) + (0.999 * 0.01)] = 0.00099 / 0.01098 ≈ 9.0%."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your educational background, core technical problem-solving projects, and software achievements.",
+          "hint": "Provide a structured summary: computer science background, key coding accomplishments, project architecture, and career goal."
+        },
+        {
+          "title": "Why Do You Want to Join Zoho?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Zoho specifically over traditional service companies?",
+          "hint": "Highlight Zoho's product-first mindset, focus on building software from scratch, deep engineering culture, and long-term vision."
+        },
+        {
+          "title": "Most Challenging Project Worked On",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Explain the most challenging software project you've worked on. What made it complex and how did you engineer the solution?",
+          "hint": "Use STAR format: highlight algorithmic complexity, data structures chosen, trade-offs evaluated, and overall outcome."
+        },
+        {
+          "title": "Difficult Bug Solved & RCA",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Describe a subtle, difficult bug you encountered in a codebase and how you diagnosed its root cause.",
+          "hint": "Explain your step-by-step debugging approach, tools used (profilers, logs, debuggers), and permanent fix implemented."
+        },
+        {
+          "title": "Project Optimization Made",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a specific performance optimization you made in a project (reducing execution time or memory footprint).",
+          "hint": "Discuss before vs after metrics, data structure / algorithmic changes, and measurable system improvement."
+        },
+        {
+          "title": "Debugging Philosophy & Approach",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "How do you approach debugging an unfamiliar codebase when documentation is minimal?",
+          "hint": "Discuss systematic isolation of modules, trace logging, unit test reproduction, and code inspection."
+        },
+        {
+          "title": "Why Should Zoho Hire You?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should Zoho hire you for a core software engineering role?",
+          "hint": "Demonstrate strong CS fundamentals, passion for writing clean optimized code, self-reliance, and problem-solving depth."
+        }
+      ]
+    }
+  ]
+}

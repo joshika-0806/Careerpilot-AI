@@ -1,0 +1,173 @@
+{
+  "name": "Infosys",
+  "difficulty": "Medium",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Find Subarray with Given Sum (Positive Numbers)",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given an unsorted array of non-negative integers and a target sum S, find a continuous subarray that adds up to the target sum S. Return the starting and ending 1-based indices.",
+          "hint": "Use a sliding window (two pointers) approach since all elements are non-negative."
+        },
+        {
+          "title": "Check if Two Strings Are Anagrams",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a function to determine if two given strings are valid anagrams of each other (contain the exact same characters with the same frequencies).",
+          "hint": "Sort both character arrays or use a single frequency count array of size 26."
+        },
+        {
+          "title": "Java Exception Hierarchy & Custom Exception Creation",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain the Throwable exception hierarchy in Java. How do you create and throw a custom user-defined exception class?",
+          "hint": "Extend Exception class (for checked exception) or RuntimeException class (for unchecked exception) and call super(message)."
+        },
+        {
+          "title": "Method Hiding vs Method Overriding in Static Methods",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Can static methods be overridden in Java? Explain Method Hiding when a subclass declares a static method with the exact signature as a static method in its superclass.",
+          "hint": "Static methods are bound at compile time based on reference type rather than runtime object instance."
+        },
+        {
+          "title": "SQL Aggregate Functions & HAVING vs WHERE",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Differentiate between the WHERE clause and the HAVING clause in SQL. Can HAVING be used without a GROUP BY clause?",
+          "hint": "WHERE filters rows before grouping occurs; HAVING filters grouped aggregate results after grouping."
+        },
+        {
+          "title": "DBMS Entity-Relationship (ER) Diagram & Keys",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "What is an ER Diagram in DBMS? Explain Cardinality (1:1, 1:N, M:N) and Candidate Keys vs Super Keys.",
+          "hint": "A Super Key uniquely identifies a tuple; a Candidate Key is a minimal Super Key without redundant attributes."
+        },
+        {
+          "title": "Operating Systems Paging vs Segmentation",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Compare Paging and Segmentation memory management techniques. Define Internal Fragmentation vs External Fragmentation.",
+          "hint": "Paging uses fixed-size memory blocks causing internal fragmentation; Segmentation uses variable-size blocks causing external fragmentation."
+        },
+        {
+          "title": "Computer Networks DNS Lookup Process & IPv4 Subnetting",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Describe the step-by-step DNS Resolution process when a user types a domain URL into a browser. Differentiate Root, TLD, and Authoritative DNS servers.",
+          "hint": "Browser cache -> OS cache -> Recursive Resolver -> Root Server -> TLD Server -> Authoritative Nameserver."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Probability & Marble Drawing",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "A bag contains 5 red, 4 blue, and 3 green marbles. If two marbles are drawn at random without replacement, what is the probability that both are red?",
+          "options": ["5/33", "5/66", "1/6", "5/12"],
+          "hint": "Total marbles = 12. P = (5/12) * (4/11) = 20 / 132 = 5/33."
+        },
+        {
+          "title": "Speed, Time and Distance Boats & Streams",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A boat travels 24 km downstream in 2 hours and returns upstream in 4 hours. What is the speed of the boat in still water?",
+          "options": ["9 km/h", "12 km/h", "6 km/h", "8 km/h"],
+          "hint": "Downstream speed = 24/2 = 12 km/h. Upstream speed = 24/4 = 6 km/h. Still water speed = (12 + 6) / 2 = 9 km/h."
+        },
+        {
+          "title": "Simple & Compound Interest Investment Growth",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "An amount doubles itself in 8 years under Simple Interest. What is the annual rate of interest?",
+          "options": ["12.5%", "10.0%", "15.0%", "8.0%"],
+          "hint": "Interest earned = Principal P. SI = P*R*T / 100 => P = P*R*8 / 100 => R = 100/8 = 12.5%."
+        },
+        {
+          "title": "Logical Reasoning Syllogisms",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Statements: 'Some algorithms are fast. All fast processes are scalable.' Conclusions: I. Some algorithms are scalable. II. All scalable processes are algorithms.",
+          "options": ["Only conclusion I follows", "Only conclusion II follows", "Both conclusions follow", "Neither conclusion follows"],
+          "hint": "Algorithms intersecting fast processes inherit scalability, so conclusion I is valid."
+        },
+        {
+          "title": "Data Interpretation & Percentage Calculation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "A project team completed 320 tasks in Q1, which was a 25% increase over Q4 tasks. How many tasks did the team complete in Q4?",
+          "options": ["256", "240", "280", "260"],
+          "hint": "Q4 tasks * 1.25 = 320 => Q4 tasks = 320 / 1.25 = 256."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your educational degree, key programming skills, and core achievements.",
+          "hint": "Present a concise summary: educational specialization, technical competencies, major project highlight, and career goal."
+        },
+        {
+          "title": "Why Do You Want to Join Infosys?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Infosys?",
+          "hint": "Highlight Infosys' world-class Mysore training facility, global digital services presence, strong value system (Infy values), and career growth."
+        },
+        {
+          "title": "Why Should We Hire You?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should Infosys hire you over other candidates?",
+          "hint": "Connect your solid CS foundation, problem-solving mindset, fast learning ability, and dedication with Infosys' expectations."
+        },
+        {
+          "title": "Explain Your Final-Year Project",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Explain your final-year academic project. What was your specific module contribution?",
+          "hint": "State the problem statement, technology stack, your individual contribution, technical challenges resolved, and project impact."
+        },
+        {
+          "title": "Strengths and Weaknesses",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "What are your core technical strengths and an area of weakness you are working to overcome?",
+          "hint": "State a strong technical/analytical skill and a genuine weakness alongside the self-improvement steps you are taking."
+        },
+        {
+          "title": "Describe a Challenge You Overcame",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Describe a challenging situation or technical obstacle you faced in your project and how you resolved it.",
+          "hint": "Follow STAR format: outline the situation, task, personal action steps taken, and successful outcome."
+        },
+        {
+          "title": "Willingness to Relocate",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Are you willing to relocate to any Infosys development center across India or work in shifts?",
+          "hint": "Express flexibility, enthusiasm for global work culture, and commitment to project requirements."
+        },
+        {
+          "title": "Five-Year Career Vision",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Where do you see yourself in five years within Infosys?",
+          "hint": "Express intent to master technology domain expertise, take on technical lead responsibilities, and drive key client deliverables."
+        }
+      ]
+    }
+  ]
+}

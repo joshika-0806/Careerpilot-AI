@@ -1,0 +1,230 @@
+{
+  "name": "Google",
+  "difficulty": "Very Hard",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Dynamic 2D Range Spatial QuadTree vs Fractional Cascading",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "Given a stream of millions of 2D coordinates representing real-time location pings of autonomous vehicles, design an in-memory spatial data structure that supports concurrent insertions in O(log N) time and efficiently queries the K nearest vehicles within a dynamic rectangular bounding box in O(log N + K). Compare how a Spatial Range Tree (Segment Tree + Treap) handles dynamic updates vs. a 2D QuadTree under high spatial skewed write traffic, and analyze the amortized rebalancing complexity under high concurrent write load.",
+          "hint": "Consider static vs dynamic splitting in QuadTrees versus fractional cascading in 2D Range Trees. Evaluate thread-safety bottlenecks on spatial quadrant split operations during concurrent updates."
+        },
+        {
+          "title": "Lock-Free Memory Management & Cache Line Bounce in Java",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "In a high-throughput Java distributed caching node, a non-blocking queue implementation using lock-free CAS (Compare-And-Swap) loops experiences severe CPU thread thrashing under extreme contention. How does Java's java.util.concurrent.atomic implementation of AtomicReferenceFieldUpdater and LongAdder cell-padded arrays mitigate cache line bounce (false sharing)? Explain how @Contended annotations and padded memory lines prevent L1/L2 cache invalidation across multi-socket CPU cores.",
+          "hint": "Analyze CPU cache line sizes (typically 64 bytes) and MESI cache coherency protocol states (Modified, Exclusive, Shared, Invalid) when multiple cores repeatedly invalidate the same cache line."
+        },
+        {
+          "title": "99th Percentile Latency Window Query & B-Tree Index Optimization",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "You are querying a billion-row table tracking global search logs with schema (query_id, user_id, timestamp, latency_ms, region). Write a SQL query using Window Functions to calculate the 99th percentile query latency for each user over a rolling 7-day window, partitioned by region, considering only active users with >100 queries. Optimize the query execution plan by designing the ideal Composite B-Tree Index or Partitioning Strategy to eliminate filesort and temporary disk spills.",
+          "hint": "Examine window frame specifications ROWS BETWEEN ... vs RANGE BETWEEN .... Consider partitioning by region and timestamp (range partitioning) with composite index (region, user_id, timestamp, latency_ms)."
+        },
+        {
+          "title": "Google Docs Real-Time Collaborative Engine Architecture",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "Design Google Drive's real-time collaborative document editing synchronization engine. The system must handle millions of concurrent users making simultaneous edits to the same document with sub-50ms latency over unstable network connections. Compare Operational Transformation (OT) vs. Conflict-free Replicated Data Types (CRDTs, e.g., LWW-Element-Set or RGA tree structure). Detail how vector clocks and causality tracking resolve concurrent insert/delete operations without a centralized lock.",
+          "hint": "Focus on state-based vs operation-based CRDTs, sequence numbers for causality graphs, and how delta-state sync minimizes payload size over WebSockets."
+        },
+        {
+          "title": "Linux Kernel Page Faults, TLB Misses & THP Fragmentation",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "During a heavy workload surge on a Linux server host, a critical multi-threaded process experiences sudden long latency spikes due to Major Page Faults and aggressive Linux kernel Out-Of-Memory (OOM) killer invocations. Trace the journey of a virtual memory address resolution through TLB hit/miss, multi-level page table walk (PML4 to PTE), Page Table Isolation (KPTI), and Swap-in mechanism. How does Transparent Huge Pages (THP) fragmentation exacerbate allocation latency in high-frequency memory allocators like tcmalloc?",
+          "hint": "Investigate how THP allocations attempt to acquire contiguous 2MB physical pages, triggering synchronous kernel compaction under high memory fragmentation and stalling memory allocation threads."
+        },
+        {
+          "title": "Spanner TrueTime API & Commit Wait Linearizability",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "In Google's Spanner globally distributed database, how does the TrueTime API (using atomic clocks and GPS receivers) resolve read-write transaction ordering across global datacenters without global lock synchronization? Detail the Commit Wait rule: if 2*epsilon is the maximum clock uncertainty bounded by TrueTime, why must a transaction wait 2*epsilon time before releasing commit locks to guarantee External Consistency (Linearizability)?",
+          "hint": "Focus on the relationship between absolute time intervals [t_earliest, t_latest] returned by TT.now() and how lock duration guarantees strict temporal ordering across datacenters."
+        },
+        {
+          "title": "Extensible Thread-Safe Distributed Rate Limiter System Design",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design an extensible, thread-safe Distributed Rate Limiter library in Java supporting dynamic algorithm switching (Leaky Bucket, Token Bucket, Sliding Window Counter) per API route at runtime. Apply SOLID principles and structural design patterns (Strategy, Factory, Decorator) to allow seamless addition of distributed storage backends (Redis Cluster, Memcached) without modifying client code or introducing synchronization bottlenecks.",
+          "hint": "Use Strategy pattern for rate-limiting algorithms, Abstract Factory for storage engine bindings, and Atomic long references or Lua scripts to ensure thread safety without heavy synchronization locks."
+        },
+        {
+          "title": "LSM-Tree vs B+ Tree Storage Engines & Compaction Strategies",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "Compare LSM-Tree (Log-Structured Merge-tree used in Bigtable/RocksDB) vs B+ Tree storage engines under heavy write workload vs heavy point-lookup workload. Explain the write amplification, read amplification, and space amplification trade-offs. Detail how Bloom Filters, Block Caches, and Compaction Strategies (Size-Tiered vs Levelled Compaction) minimize disk IOPS during range scans and point queries.",
+          "hint": "LSM-Trees trade read efficiency and compaction overhead for sequential write speed. Levelled compaction reduces space amplification but increases write amplification compared to Size-Tiered compaction."
+        },
+        {
+          "title": "Dynamic Min-Cost Max-Flow Optimization with Vertex Potentials",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "You are given a directed graph with N vertices (N <= 10^5) and M edges (M <= 5 * 10^5) representing Google Search page ranking links. Each edge has a dynamic capacity and weight that changes per millisecond. Formulate an algorithm to compute the Maximum Flow with Min-Cost using Dinic's Algorithm combined with Shortest Path Faster Algorithm (SPFA) or Successive Shortest Path with Dijkstra Potentials. Explain how capacity scaling optimizes runtime on dense networks.",
+          "hint": "Maintain vertex potentials h(u) to transform edge weights to non-negative values w'(u,v) = w(u,v) + h(u) - h(v), enabling Dijkstra with Fibonacci heap in O(M + N log N) per augmenting path."
+        },
+        {
+          "title": "Linux epoll Architecture: Edge-Triggered vs Level-Triggered Modes",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Explain the Linux epoll I/O multiplexing mechanism compared to select and poll. How does epoll achieve O(1) readiness notification efficiency using Red-Black Trees and In-Kernel Ready Lists? Detail the operational differences between Edge-Triggered (EPOLLET) and Level-Triggered modes, and why non-blocking sockets with EAGAIN loop draining are mandatory in Edge-Triggered mode.",
+          "hint": "Edge-Triggered notifies only on state transition (e.g. from no data to data available). Failing to read until EAGAIN causes threads to sleep forever waiting for notifications that won't arrive."
+        },
+        {
+          "title": "ZGC & Shenandoah Low-Latency Garbage Collection Mechanisms",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Compare Java's ZGC (Z Garbage Collector) and Shenandoah GC with traditional G1 GC in sub-millisecond max pause time SLA environments. How do Load Barriers and Colored Pointers in ZGC enable concurrent marking and relocation without stopping application threads (STW pause)? Analyze the impact of pointer self-healing on CPU instruction throughput during heavy relocation phases.",
+          "hint": "Focus on how load barriers intercept object reference reads during application execution, dynamically updating stale references to new heap locations before dereferencing."
+        },
+        {
+          "title": "QUIC Protocol vs TCP + TLS 1.3: Head-of-Line Blocking & Zero-RTT",
+          "type": "technical",
+          "difficulty": "Very Hard",
+          "problem_statement": "How does HTTP/3 over QUIC overcome TCP Head-of-Line (HoL) blocking at the transport layer during multi-stream multiplexing? Detail how QUIC uses UDP, independent packet encryption per stream, connection IDs for IP roaming, and 0-RTT handshake protocols. What cryptographic trade-off exists when accepting 0-RTT replay attacks, and how does Google server infrastructure mitigate them?",
+          "hint": "TCP stalls all multiplexed streams if a single segment is lost. QUIC framing isolates packet losses per stream ID. 0-RTT replay attacks are mitigated using server anti-replay IP/time tokens."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Probability & Stochastic Meeting Time",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Two Google engineers agree to meet at the main campus quad between 12:00 PM and 1:00 PM. Each engineer arrives at a uniform random time independently within the hour and waits for exactly 15 minutes before leaving. What is the probability that they will meet?",
+          "options": [
+            "A) 7/16 (0.4375)",
+            "B) 9/16 (0.5625)",
+            "C) 1/2 (0.5000)",
+            "D) 3/8 (0.3750)"
+          ],
+          "hint": "Express arrival times as x, y in [0, 60]. The meeting condition is |x - y| <= 15. Calculate the area of the favorable region within the 60x60 square."
+        },
+        {
+          "title": "Symmetric Game Theory & Coin Removal Strategy",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "In a game played with 100 coins placed in a straight line, two players take turns removing either 1 coin from either end or 2 adjacent coins from anywhere in the line. Assuming both players play with optimal mathematical strategies, which player guarantees a win, and what is the winning strategy?",
+          "options": [
+            "A) First player by mirroring the second player's moves",
+            "B) Second player by maintaining symmetry across the center of the remaining coins",
+            "C) First player by taking 2 coins from the exact middle on the first turn to create two symmetric piles",
+            "D) Second player by forcing an odd number of coin segments"
+          ],
+          "hint": "Analyze symmetry strategies. On the first move, can Player 1 create a symmetrical state such that any move by Player 2 can be mirrored on the opposite side?"
+        },
+        {
+          "title": "Parallel Worker Pipeline Rate & Work Optimization",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A Google data pipeline processes incoming logs using 3 parallel worker pools: A, B, and C. Pool A and Pool B working together complete a batch in 12 hours. Pool B and Pool C together complete the batch in 15 hours. If Pool A works for 5 hours and Pool B works for 7 hours, Pool C can complete the remaining batch in 11 hours. How many hours would Pool A alone take to complete the entire batch?",
+          "options": [
+            "A) 20 hours",
+            "B) 18 hours",
+            "C) 24 hours",
+            "D) 30 hours"
+          ],
+          "hint": "Let rates be a, b, c batches per hour. System: a+b = 1/12, b+c = 1/15, and 5a + 7b + 11c = 1. Group 5(a+b) + 2(b+c) + 9c = 1."
+        },
+        {
+          "title": "Grid Dynamic Programming Path Counting with Obstacles",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "You are navigating an 8x8 grid from top-left (0,0) to bottom-right (7,7), moving only Right or Down. If exactly 5 cells are blocked and impassable at coordinates (2,2), (3,5), (4,3), (5,1), and (6,6), what is the total number of valid paths from start to destination?",
+          "options": [
+            "A) 1,430 paths",
+            "B) 942 paths",
+            "C) 1,128 paths",
+            "D) 876 paths"
+          ],
+          "hint": "Use Grid Dynamic Programming path counting: dp[i][j] = dp[i-1][j] + dp[i][j-1] for non-blocked cells, setting dp[i][j] = 0 at blocked coordinates."
+        },
+        {
+          "title": "Expected Value & Sequential Markov Chain Transitions",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A fair 6-sided die is rolled repeatedly until the sequence of outcomes (5, 6) appears consecutively. What is the expected total number of die rolls required?",
+          "options": [
+            "A) 36 rolls",
+            "B) 42 rolls",
+            "C) 30 rolls",
+            "D) 48 rolls"
+          ],
+          "hint": "Set up state equations for states E0 (start), E1 (last roll was 5), and E2 (success state). Note that rolling a 5 from E1 keeps you in E1."
+        },
+        {
+          "title": "Digits Permutation & Divisibility Constraints",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "How many 6-digit positive integers can be formed using the digits {1, 2, 3, 4, 5, 6} without repetition such that the number formed by the first k digits is divisible by k for all 1 <= k <= 6?",
+          "options": [
+            "A) 0",
+            "B) 1",
+            "C) 2",
+            "D) 4"
+          ],
+          "hint": "Check divisibility rules digit by digit: 2nd digit must be even, 3rd digit sum divisible by 3, 4th even (ending 24 or 56), 5th digit must be 5, 6th digit sum divisible by 6."
+        },
+        {
+          "title": "Bayesian Spam Classifier Conditional Probability",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A machine learning classifier at Google detects spam with 99% accuracy for spam emails and 95% accuracy for non-spam emails. If 2% of all incoming emails are actual spam, what is the probability that an email flagged as spam by the classifier is actually spam?",
+          "options": [
+            "A) 28.8%",
+            "B) 99.0%",
+            "C) 67.2%",
+            "D) 50.5%"
+          ],
+          "hint": "Apply Bayes' Theorem: P(Spam|Flagged) = P(Flagged|Spam)*P(Spam) / [P(Flagged|Spam)*P(Spam) + P(Flagged|NonSpam)*P(NonSpam)]. Note P(Flagged|NonSpam) = 0.05."
+        },
+        {
+          "title": "2-Connected Graph Minimum Edges Network Topology",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A distributed server network consists of 10 nodes. Each pair of nodes can be directly connected with a fiber link. What is the minimum number of fiber links required to guarantee that the network remains connected even if any arbitrary single node fails?",
+          "options": [
+            "A) 10 links",
+            "B) 12 links",
+            "C) 15 links",
+            "D) 18 links"
+          ],
+          "hint": "A network remains connected after any single node deletion if and only if every node has a minimum vertex degree >= 2 (2-connected graph). Minimum edges for N-node 2-connected graph is N."
+        },
+        {
+          "title": "GPU Fault Bayesian Probability in Distributed Training",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "A machine learning pipeline trains models across 4 distributed GPUs. GPU 1 handles 40% of the workload with a 1% failure rate, GPU 2 handles 30% with a 2% failure rate, GPU 3 handles 20% with a 3% failure rate, and GPU 4 handles 10% with a 5% failure rate. If a training job fails due to GPU fault, what is the probability it failed on GPU 3?",
+          "options": [
+            "A) 28.6%",
+            "B) 31.6%",
+            "C) 21.4%",
+            "D) 25.0%"
+          ],
+          "hint": "Calculate total failure probability P(F) = 0.40(0.01) + 0.30(0.02) + 0.20(0.03) + 0.10(0.05) = 0.004 + 0.006 + 0.006 + 0.005 = 0.021. Then P(GPU3|F) = 0.006 / 0.021."
+        },
+        {
+          "title": "Combinatorial Non-Consecutive Binary Sequences",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "An algorithm generates binary strings of length 10. How many binary strings of length 10 contain no two consecutive zeros?",
+          "options": [
+            "A) 89",
+            "B) 144",
+            "C) 120",
+            "D) 233"
+          ],
+          "hint": "Let F(n) be the number of valid binary strings of length n. Express F(n) using Fibonacci relation: F(n) = F(n-1) + F(n-2) with F(1)=2, F(2)=3, F(3)=5..."
+        }
+      ]
+    }
+  ]
+}

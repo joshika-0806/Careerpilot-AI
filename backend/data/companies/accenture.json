@@ -1,0 +1,251 @@
+{
+  "name": "Accenture",
+  "difficulty": "Medium",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "String Immutability & Memory Allocation",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Why is String immutable in Java, and how does StringBuilder offer better performance during heavy string manipulation? Explain memory allocation in the String Constant Pool vs Heap Memory.",
+          "hint": "Think about how String interning in the String Constant Pool (SCP) enforces immutability, whereas StringBuilder operates on a dynamic, expandable char[] buffer without allocating new Heap memory objects during loop concatenations."
+        },
+        {
+          "title": "HashMap Internals & Hash Collision Resolution",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain how HashMap works internally during put() and get() operations. How are hash collisions handled, and why must custom objects override equals() and hashCode()?",
+          "hint": "Focus on hash code computation, bucket index calculation via (n-1)&hash, LinkedList to Red-Black Tree conversion when bucket size exceeds 8, and why equal objects must produce identical hash codes."
+        },
+        {
+          "title": "Encapsulation vs Abstraction in Practice",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Differentiate between Encapsulation and Abstraction in Object-Oriented Design using a real-world software example.",
+          "hint": "Encapsulation is implementation-level data protection using private fields and validation accessors. Abstraction is design-level complexity hiding that exposes essential operational interfaces to the caller."
+        },
+        {
+          "title": "Compile-time vs Runtime Polymorphism",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Compare Compile-Time Polymorphism (Method Overloading) and Runtime Polymorphism (Method Overriding). How does Dynamic Method Dispatch resolve method calls at runtime?",
+          "hint": "Overloading is resolved by the compiler based on method signatures. Overriding uses Dynamic Method Dispatch, where the JVM checks the actual object instance in heap memory rather than the reference type."
+        },
+        {
+          "title": "Interface vs Abstract Class & Inheritance",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "When should you choose an Abstract Class over an Interface? How do Interfaces solve the Diamond Problem of multiple inheritance?",
+          "hint": "Use an Abstract Class for IS-A relationships with shared state/constructors; use an Interface for CAN-DO behavioral contracts across unrelated classes. Interfaces prevent multiple class inheritance ambiguity."
+        },
+        {
+          "title": "Find Equilibrium Index in Array",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given an array of integers, find the first equilibrium index where the sum of elements at lower indexes equals the sum of elements at higher indexes. Return -1 if no equilibrium index exists.",
+          "hint": "Precompute the total array sum in O(N). Then iterate through the array maintaining a left sum; right sum equals total_sum - left_sum - current_element. Compare left_sum with right_sum."
+        },
+        {
+          "title": "Reverse Vowels of a String",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Given a string S, reverse only all the vowels ('a', 'e', 'i', 'o', 'u', both lowercase and uppercase) in the string while leaving all consonants in their original positions.",
+          "hint": "Use a two-pointer approach starting at index 0 and index N-1. Move pointers inward until both land on vowels, then swap characters."
+        },
+        {
+          "title": "SQL Joins & Unmatched Records",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain the differences between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN. Write SQL logic to find all employees who are NOT assigned to any department.",
+          "hint": "Perform a LEFT JOIN between Employees and Departments on department_id, then filter with WHERE Departments.department_id IS NULL."
+        },
+        {
+          "title": "GROUP BY vs HAVING Clause & Aggregation",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Differentiate between WHERE and HAVING clauses when using GROUP BY and Aggregate Functions (COUNT, SUM, AVG). Write a query to find departments with total salary > $150,000.",
+          "hint": "WHERE filters raw table rows BEFORE grouping; HAVING filters aggregated groups AFTER evaluation. Logical sequence: FROM -> WHERE -> GROUP BY -> HAVING -> SELECT."
+        },
+        {
+          "title": "Primary Key vs Foreign Key & Integrity",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Compare Primary Key and Foreign Key constraints in relational databases. How do ON DELETE CASCADE and ON UPDATE CASCADE maintain referential integrity?",
+          "hint": "A Primary Key uniquely identifies rows and cannot be NULL. A Foreign Key references a parent primary key. CASCADE actions automatically update or delete child rows when the parent changes."
+        },
+        {
+          "title": "ACID Properties & Transaction Control",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain the ACID properties in database management systems. Which property guarantees that a transaction completes entirely or not at all?",
+          "hint": "Atomicity ('all or nothing'). If any sub-operation within a database transaction fails, the entire transaction is rolled back, leaving the database state unchanged."
+        },
+        {
+          "title": "Database Normalization Forms",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "What is Database Normalization? Distinguish between First Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF).",
+          "hint": "1NF ensures atomic column values (no repeating groups). 2NF removes partial functional dependencies on composite keys. 3NF removes transitive dependencies."
+        },
+        {
+          "title": "Process vs Thread & Context Switching",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Differentiate between a Process and a Thread. What resources are shared between threads of the same process, and why is thread context switching faster?",
+          "hint": "Threads share code section, data section, and OS resources (files), but maintain separate stacks and registers. Shared memory address space makes thread context switching faster."
+        },
+        {
+          "title": "Deadlock Conditions & Prevention",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "What is a Deadlock in operating systems? State the four necessary conditions required for a deadlock to occur.",
+          "hint": "The four Coffman conditions are: 1. Mutual Exclusion, 2. Hold and Wait, 3. No Preemption, and 4. Circular Wait."
+        },
+        {
+          "title": "TCP vs UDP Transport Protocols",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Compare TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). Why is UDP preferred over TCP for real-time video streaming applications?",
+          "hint": "TCP is connection-oriented and guarantees reliable packet delivery with retransmissions. UDP is connectionless and faster, sacrificing retransmission for low latency."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Project Completion Calculation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "If 5 men can complete a project in 15 days, how many days will 10 men take to complete the exact same project?",
+          "options": [
+            "A) 5 days",
+            "B) 7.5 days",
+            "C) 10 days",
+            "D) 12 days"
+          ],
+          "hint": "Total Work = Men * Days = 5 * 15 = 75 man-days. For 10 men: Days = Total Work / 10 = 75 / 10 = 7.5 days."
+        },
+        {
+          "title": "Marked Price Determination",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A shopkeeper sells an item at a 20% discount on the marked price and still earns a 10% profit. If the cost price is $500, what is the marked price?",
+          "options": [
+            "A) $550",
+            "B) $600",
+            "C) $650",
+            "D) $687.5"
+          ],
+          "hint": "Selling Price = CP + 10% Profit = 500 + 50 = $550. Marked Price * 0.80 = 550 => Marked Price = 550 / 0.80 = $687.5."
+        },
+        {
+          "title": "Population Fluctuation Analysis",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "The population of a town increases by 10% in the first year and decreases by 10% in the second year. If the current population is 9,900, what was the initial population?",
+          "options": [
+            "A) 9,900",
+            "B) 10,000",
+            "C) 10,100",
+            "D) 10,500"
+          ],
+          "hint": "Net multiplier = 1.10 * 0.90 = 0.99. Initial Population = 9,900 / 0.99 = 10,000."
+        },
+        {
+          "title": "Average Speed Calculation",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A car travels from City A to City B at a speed of 60 km/h and returns along the same route at a speed of 40 km/h. What is the average speed for the entire journey?",
+          "options": [
+            "A) 48 km/h",
+            "B) 50 km/h",
+            "C) 52 km/h",
+            "D) 55 km/h"
+          ],
+          "hint": "Use the Harmonic Mean formula for equal distances: Average Speed = (2 * v1 * v2) / (v1 + v2) = (2 * 60 * 40) / 100 = 48 km/h."
+        },
+        {
+          "title": "Numerical Pattern Analysis",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "Find the next number in the series: 3, 8, 15, 24, ?",
+          "options": [
+            "A) 31",
+            "B) 35",
+            "C) 36",
+            "D) 39"
+          ],
+          "hint": "The differences between consecutive numbers are 5, 7, 9. The next difference is 11. 24 + 11 = 35."
+        },
+        {
+          "title": "Family Relationship Deduction",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Pointing to a photograph, Rohit said, 'She is the daughter of my grandfather's only son.' How is the girl in the photograph related to Rohit?",
+          "options": [
+            "A) Sister",
+            "B) Cousin",
+            "C) Mother",
+            "D) Aunt"
+          ],
+          "hint": "Grandfather's only son = Rohit's father. The daughter of Rohit's father is Rohit's sister."
+        },
+        {
+          "title": "Cipher Decoding Problem",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "In a certain code language, 'STATION' is coded as 'TUBUJPO'. How is 'SYSTEM' coded in that same language?",
+          "options": [
+            "A) TZTUFN",
+            "B) TZTFUN",
+            "C) TYTVEON",
+            "D) SZSUEN"
+          ],
+          "hint": "Each letter is shifted forward by +1 position in the alphabet: S->T, Y->Z, S->T, T->U, E->F, M->N => TZTUFN."
+        },
+        {
+          "title": "Seating Arrangement Deduction",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Five friends A, B, C, D, E are sitting in a row facing North. A is to the immediate left of B. C is at the extreme right end. D is to the immediate right of E. If B is second from the right end, who is sitting in the middle?",
+          "options": [
+            "A) A",
+            "B) B",
+            "C) C",
+            "D) E"
+          ],
+          "hint": "Row order from left to right: E, D, A, B, C. Position 3 (middle) is A."
+        },
+        {
+          "title": "Logical Statement Evaluation",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Statements:\n1. All cats are pets.\n2. Some pets are dogs.\n\nConclusions:\nI. Some cats are dogs.\nII. All pets are cats.",
+          "options": [
+            "A) Only conclusion I follows",
+            "B) Only conclusion II follows",
+            "C) Neither I nor II follows",
+            "D) Both I and II follow"
+          ],
+          "hint": "No conclusion follows with certainty. Cats and dogs may be completely separate within the pets set."
+        },
+        {
+          "title": "Liquid Mixture Ratio Problem",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A mixture contains milk and water in the ratio 4:1. If 5 liters of water is added to the mixture, the ratio becomes 4:3. What was the initial quantity of milk in the mixture?",
+          "options": [
+            "A) 8 liters",
+            "B) 10 liters",
+            "C) 12 liters",
+            "D) 15 liters"
+          ],
+          "hint": "Let Milk = 4x, Water = 1x. New water = x + 5. Equation: 4x / (x + 5) = 4/3 => 12x = 4x + 20 => 8x = 20 => x = 2.5. Milk = 4 * 2.5 = 10 liters."
+        }
+      ]
+    }
+  ]
+}

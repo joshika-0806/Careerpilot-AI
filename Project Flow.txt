@@ -1,0 +1,238 @@
+Complete Project Flow
+
+User Website Open
+        │
+        ▼
+React Load
+        │
+        ▼
+Firebase Login
+        │
+        ▼
+Dashboard
+        │
+        ▼
+Resume Upload
+        │
+        ▼
+Flask Upload API
+        │
+        ▼
+Resume Save
+        │
+        ▼
+SHA256 Hash
+        │
+        ▼
+Blockchain Store
+        │
+        ▼
+Resume Parser
+        │
+        ▼
+Skill Extraction
+        │
+        ▼
+ATS Score
+        │
+        ▼
+Generate Report
+        │
+        ▼
+React Report Page
+        │
+        ▼
+Interview Preparation
+        │
+        ▼
+Company Questions
+        │
+        ▼
+Coding / HR / Technical
+
+Flow 1️⃣ Login Flow
+
+User Click Login
+        │
+        ▼
+React Login Page
+        │
+        ▼
+Firebase Authentication
+        │
+        ▼
+ID Token Receive
+        │
+        ▼
+React Token Store
+        │
+        ▼
+Every API Call
+Authorization: Bearer Token
+        │
+        ▼
+Backend Verify Token
+        │
+        ▼
+User UID Extract
+Files involved
+
+Frontend
+
+firebase.js
+AuthContext.jsx
+Login Component
+api.js
+
+Backend
+
+auth.py
+require_auth decorator
+
+Flow 2️⃣ Resume Upload (Most Important)
+
+User Select PDF
+        │
+        ▼
+Upload Button Click
+        │
+        ▼
+React FormData Create
+        │
+        ▼
+Axios POST /upload
+        │
+        ▼
+Flask Receive File
+        │
+        ▼
+Check PDF/DOCX
+        │
+        ▼
+Create User Folder
+        │
+        ▼
+Save Resume
+        │
+        ▼
+SHA256 Hash
+        │
+        ▼
+Blockchain
+        │
+        ▼
+Return Success
+        │
+        ▼
+React Show Success
+
+Flow 3️⃣ Resume Analysis
+
+React Click Analyze
+        │
+        ▼
+POST /analyze
+        │
+        ▼
+Resume Parser
+        │
+        ▼
+Extract Text
+        │
+        ▼
+Skill Extraction
+        │
+        ▼
+Compare Job Skills
+        │
+        ▼
+ATS Calculation
+        │
+        ▼
+Suggestions
+        │
+        ▼
+JSON Response
+        │
+        ▼
+React Cards
+
+Flow 4️⃣ Report Generation
+
+React
+GET /report
+        │
+        ▼
+Backend
+        │
+        ▼
+SQLite
+        │
+        ▼
+Resume Data
+        │
+        ▼
+ATS Score
+        │
+        ▼
+Suggestions
+        │
+        ▼
+JSON
+        │
+        ▼
+Report.jsx
+
+Flow 5️⃣ Company Preparation
+
+User Select Amazon
+        │
+        ▼
+React
+        │
+        ▼
+GET /company/amazon
+        │
+        ▼
+SQLite
+        │
+        ▼
+Questions
+        │
+        ▼
+Return JSON
+        │
+        ▼
+React Show Questions
+
+Flow 6️⃣ Coding Round
+
+Company
+        │
+        ▼
+Coding Questions
+        │
+        ▼
+Coding Workspace
+        │
+        ▼
+Submit
+        │
+        ▼
+Save Progress
+
+Flow 7️⃣ Admin
+
+Admin Login
+        │
+        ▼
+Admin Panel
+        │
+        ▼
+Add Company
+        │
+        ▼
+Add Questions
+        │
+        ▼
+SQLite Update

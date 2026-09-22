@@ -1,0 +1,159 @@
+{
+  "name": "Microsoft",
+  "difficulty": "Hard",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Serialize and Deserialize Binary Tree with Edge Case Handling",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design an algorithm to serialize a binary tree into a string format and deserialize that string back to the original binary tree structure. Optimize for minimal string length and handle null nodes, empty trees, and negative integer values efficiently.",
+          "hint": "Use preorder traversal with a delimiter (e.g., comma) and a special marker (e.g., 'X') for null children."
+        },
+        {
+          "title": "Lowest Common Ancestor in Binary Tree & Deep Recursion Limits",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given a binary tree and two nodes p and q, find their lowest common ancestor (LCA). Provide an optimal solution using O(N) time and O(H) space, and explain how to prevent stack overflow when the tree is severely skewed.",
+          "hint": "Use post-order traversal recursion or iterative parent pointers with a hash set."
+        },
+        {
+          "title": "Java Thread Synchronization & Memory Visibility Model",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Explain how the Java Memory Model (JMM) guarantees visibility and ordering across threads using the 'happens-before' principle. Differentiate between volatile variables, synchronized blocks, and ReentrantLock with condition variables.",
+          "hint": "Focus on CPU cache coherence, memory barriers (fences), and atomic compare-and-swap (CAS) operations."
+        },
+        {
+          "title": "Object-Oriented Design for Azure File Storage Service",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design an extensible Object-Oriented architecture for a cloud file storage service (supporting directories, files, permissions, and quota management). Apply SOLID design principles and demonstrate how polymorphic interfaces support different storage backends.",
+          "hint": "Use the Composite Pattern for hierarchical file systems and Strategy Pattern for cloud storage adapters."
+        },
+        {
+          "title": "SQL Window Functions & High-Scale Log Analytics Query",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Write a SQL query strategy using window functions (ROW_NUMBER, DENSE_RANK, LAG) to identify user sessions that experienced consecutive service latency spikes exceeding 500ms within a 10-minute sliding window.",
+          "hint": "Partition by user_id, order by timestamp, and compute time deltas between adjacent rows using LAG()."
+        },
+        {
+          "title": "DBMS Transaction Isolation Levels & Phantom Reads in InnoDB/SQL Server",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Analyze the four standard SQL transaction isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable). Explain how Multi-Version Concurrency Control (MVCC) prevents non-repeatable reads and phantom reads.",
+          "hint": "Examine undo logs, read views, and next-key locks in database engines."
+        },
+        {
+          "title": "Operating Systems Virtual Memory & Page Fault Handling",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Trace the step-by-step process execution when a CPU instruction triggers a virtual memory page fault. Detail the roles of the TLB, Page Table, OS Page Fault Handler, Secondary Disk Storage, and LRU Page Replacement algorithm.",
+          "hint": "Address hardware interrupts, page table entry dirty/valid bits, disk I/O latency, and context switching."
+        },
+        {
+          "title": "Computer Networks TCP Window Scaling & TLS 1.3 Handshake Protocol",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Compare TLS 1.2 vs TLS 1.3 key exchange handshakes. Explain how 1-RTT and 0-RTT handshakes reduce latency in secure microservices, and how TCP window scaling handles high bandwidth-delay product networks.",
+          "hint": "Highlight Elliptic Curve Diffie-Hellman (ECDHE) key exchange and session resumption tokens."
+        },
+        {
+          "title": "Basic System Design: Distributed Unique ID Generator (Snowflake)",
+          "type": "technical",
+          "difficulty": "Hard",
+          "problem_statement": "Design a high-throughput, fault-tolerant distributed unique ID generator (capable of generating 100k k-sortable IDs per second across multiple data centers). Explain bit allocation for timestamp, worker ID, and sequence numbers.",
+          "hint": "Use a 64-bit ID structure: 1 sign bit + 41 bits timestamp + 10 bits worker/datacenter ID + 12 bits sequence number."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Cloud Credit & Storage Cost Optimization",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "A enterprise client allocates a monthly cloud budget of $12,000 between compute instances ($50/hour) and storage buckets ($0.10/GB/month). If compute hours are increased by 20% and storage capacity is doubled, the total cost becomes $17,400. What was the initial compute allocation in hours?",
+          "options": ["160 hours", "200 hours", "240 hours", "180 hours"],
+          "hint": "Set up simultaneous linear equations: 50C + 0.10S = 12000 and 50(1.2C) + 0.10(2S) = 17400."
+        },
+        {
+          "title": "Probability of Server Cluster Uptime",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "A distributed cluster consists of 4 independent servers. Each server has an operational reliability of 90% during peak hours. The cluster remains functional as long as at least 3 servers are online. What is the probability that the cluster remains functional?",
+          "options": ["94.77%", "91.85%", "97.20%", "89.10%"],
+          "hint": "Calculate P(X = 3) + P(X = 4) using the binomial distribution formula: 4*(0.9^3)*(0.1^1) + (0.9^4)."
+        },
+        {
+          "title": "Algorithm Speedup & Pipeline Throughput Ratio",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "System A processes a batch of jobs in 45 minutes. System B, running a newly optimized algorithm, processes the same batch 25% faster. If System A and System B run concurrently on separate halves of a workload, how long will the combined job take?",
+          "options": ["18.5 minutes", "20.0 minutes", "22.5 minutes", "25.0 minutes"],
+          "hint": "System B time = 45 / 1.25 = 36 mins. System B processes half the batch in 18 mins; System A processes half in 22.5 mins. Maximum time determines total batch completion if independent."
+        },
+        {
+          "title": "Combinatorial Permutation of Modular Microservices",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "8 distinct software modules must be arranged in a deployment pipeline. If 2 specific core infrastructure modules must always be placed adjacent to each other, how many valid deployment orderings exist?",
+          "options": ["5,040", "10,080", "40,320", "20,160"],
+          "hint": "Treat the 2 adjacent modules as a single combined block (7! arrangements) and multiply by 2! for their internal orderings: 7! * 2."
+        },
+        {
+          "title": "Logical Reasoning & Binary Matrix Pattern Analysis",
+          "type": "aptitude",
+          "difficulty": "Hard",
+          "problem_statement": "Evaluate the number series: 4, 12, 36, 108, 324, ?. Find the next value and determine the sum of digits of the resulting number.",
+          "options": ["972 (Sum: 18)", "972 (Sum: 20)", "864 (Sum: 18)", "996 (Sum: 24)"],
+          "hint": "Each term is multiplied by 3 (geometric progression). 324 * 3 = 972. Sum of digits: 9 + 7 + 2 = 18."
+        }
+      ]
+    },
+    {
+      "name": "Behavioral Questions",
+      "questions": [
+        {
+          "title": "Challenging Project & Technical Ownership",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a challenging technical project you worked on. What made it complex and how did you navigate the obstacles?",
+          "hint": "Use the STAR method. Emphasize problem breakdown, architectural decisions, and final outcomes."
+        },
+        {
+          "title": "Cross-Functional Team Collaboration",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Describe a situation where you collaborated closely with a cross-functional team or peers to solve a critical issue.",
+          "hint": "Focus on communication, active listening, leverage of complementary skillsets, and shared accountability."
+        },
+        {
+          "title": "Handling Conflicting Priorities & Deadlines",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Tell me about a time you handled conflicting priorities or shifting technical requirements under tight deadlines.",
+          "hint": "Explain how you evaluated impact, communicated trade-offs with stakeholders, and reprioritized deliverables."
+        },
+        {
+          "title": "Technical Decision Trade-offs & Rationale",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Explain a significant technical decision or trade-off you made in a project and why you chose that approach.",
+          "hint": "Discuss alternatives considered, data/benchmarks evaluated, trade-offs (e.g. latency vs consistency), and results."
+        },
+        {
+          "title": "Failure, Self-Reflection & Growth",
+          "type": "hr",
+          "difficulty": "Hard",
+          "problem_statement": "Describe a failure or setback in your software development experience and how you improved your workflow afterward.",
+          "hint": "Demonstrate growth mindset, root cause analysis (RCA), and concrete changes you implemented to prevent recurrence."
+        }
+      ]
+    }
+  ]
+}

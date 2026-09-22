@@ -1,0 +1,166 @@
+{
+  "name": "TCS",
+  "difficulty": "Medium",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Count Frequency of Each Element in an Array",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a program to count the frequency of each element in an array. Optimize the time complexity to O(N) using a Hash Map or Frequency Array.",
+          "hint": "Iterate through the array and store element counts in a Map<Integer, Integer> or integer lookup array."
+        },
+        {
+          "title": "Reverse Words in a Given String",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given a sentence string, reverse the order of words without reversing the characters inside individual words, handling extra spaces cleanly.",
+          "hint": "Split the string by spaces, filter out empty tokens, and traverse backward or use a Stack."
+        },
+        {
+          "title": "Java Exception Handling & Checked vs Unchecked Exceptions",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Differentiate between Checked and Unchecked exceptions in Java. Explain how the try-catch-finally block works and the effect of calling System.exit(0) inside a try block.",
+          "hint": "Checked exceptions are verified at compile-time (IOException, SQLException); Unchecked occur at runtime (NullPointerException, ArithmeticException)."
+        },
+        {
+          "title": "Method Overloading vs Overriding & Runtime Polymorphism",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain Runtime Polymorphism in Java using dynamic method dispatch. What happens when a parent reference variable points to a child class object?",
+          "hint": "The overridden method executed is determined dynamically at runtime based on the actual object created."
+        },
+        {
+          "title": "SQL Subqueries & Second Highest Salary",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Write a SQL query to find the second highest salary from an Employee table without using the LIMIT or TOP clauses.",
+          "hint": "Use a subquery: SELECT MAX(salary) FROM Employee WHERE salary < (SELECT MAX(salary) FROM Employee)."
+        },
+        {
+          "title": "DBMS Normalization (1NF, 2NF, 3NF)",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain the concept of database Normalization. Detail the rules for First Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF) to eliminate data redundancy.",
+          "hint": "1NF requires atomic values; 2NF eliminates partial dependency; 3NF eliminates transitive dependency."
+        },
+        {
+          "title": "Operating Systems CPU Scheduling Algorithms",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Compare First-Come First-Served (FCFS), Shortest Job First (SJF), and Round Robin (RR) CPU scheduling algorithms. Define turnaround time, waiting time, and starvation.",
+          "hint": "SJF provides optimal average waiting time; Round Robin uses time-slicing to prevent process starvation."
+        },
+        {
+          "title": "Computer Networks IP Addressing & Subnetting Basics",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain IPv4 vs IPv6 addressing. What is a Subnet Mask, and how is it used to distinguish between network ID and host ID?",
+          "hint": "IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses. Subnet mask bitwise ANDed with IP yields the network portion."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Aptitude: Time and Work Efficiency",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "A can complete a piece of work in 15 days and B can complete it in 20 days. If they work together for 4 days, what fraction of the total work is left unfinished?",
+          "options": ["7/15", "8/15", "1/2", "11/15"],
+          "hint": "1 day combined work = 1/15 + 1/20 = 7/60. Work in 4 days = 28/60 = 7/15. Remaining = 1 - 7/15 = 8/15."
+        },
+        {
+          "title": "Aptitude: Profit & Loss Discount Markup",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "A trader marks his goods 25% above the cost price and allows a discount of 10% on the marked price. What is his net profit percentage?",
+          "options": ["12.5%", "15.0%", "10.0%", "14.5%"],
+          "hint": "Net profit % = 25 - 10 - (25*10)/100 = 15 - 2.5 = 12.5%."
+        },
+        {
+          "title": "Aptitude: Mixture & Alligation Ratio",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "In what ratio must milk at $40 per liter be mixed with water (at $0 per liter) so that selling the mixture at $35 per liter yields a profit of 16.66% (1/6)?",
+          "options": ["3:1", "4:1", "5:2", "3:2"],
+          "hint": "Cost price of mixture = 35 / (7/6) = $30. Use alligation: (30 - 0) : (40 - 30) = 30:10 = 3:1."
+        },
+        {
+          "title": "Aptitude: Permutations & Combinations Word Formation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "In how many different ways can the letters of the word 'SYSTEM' be arranged?",
+          "options": ["360", "720", "180", "540"],
+          "hint": "Word length = 6 letters with 'S' repeated 2 times. Total arrangements = 6! / 2! = 720 / 2 = 360."
+        },
+        {
+          "title": "Logical Reasoning: Blood Relations Problem",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "Pointing to a photograph, a man said, 'I have no brother or sister, but that man's father is my father's son.' Whose photograph was it?",
+          "options": ["His son's", "His father's", "His own", "His nephew's"],
+          "hint": "'My father's son' means the man himself (since he has no siblings). So 'that man's father is myself'."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your educational background, core technical skills, and key accomplishments.",
+          "hint": "Deliver a structured summary of your academic background, technical proficiency, project highlights, and career goal."
+        },
+        {
+          "title": "Why Do You Want to Join TCS?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Tata Consultancy Services (TCS)?",
+          "hint": "Highlight TCS's global reputation, Tata work ethics/values, career stability, continuous training (TCS iON/Elevate), and project exposure."
+        },
+        {
+          "title": "Why Should We Hire You?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should TCS hire you for this role?",
+          "hint": "Connect your solid CS fundamentals, problem-solving mindset, fast learning ability, and dedication with TCS's expectations."
+        },
+        {
+          "title": "Explain Your Final-Year Project",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Explain your final-year academic or capstone project. What was your specific contribution?",
+          "hint": "Briefly state problem statement, technologies used, your personal module contribution, challenges overcome, and key outcome."
+        },
+        {
+          "title": "Strengths and Weaknesses",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "What are your greatest technical strengths and an area of weakness you are actively improving?",
+          "hint": "Mention a strong technical/soft skill and a real weakness along with actionable steps you are taking to grow."
+        },
+        {
+          "title": "Relocation and Shift Flexibility",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Are you willing to relocate to any TCS location across India/globally and work in flexible project shifts?",
+          "hint": "Confirm flexibility, enthusiasm for learning in new environments, and professional commitment."
+        },
+        {
+          "title": "Five-Year Career Vision",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Where do you see yourself in five years within TCS?",
+          "hint": "Express desire to master technical domain expertise, take on module leadership responsibilities, and contribute to enterprise projects."
+        }
+      ]
+    }
+  ]
+}

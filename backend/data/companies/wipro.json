@@ -1,0 +1,166 @@
+{
+  "name": "Wipro",
+  "difficulty": "Easy",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Check if Number is Prime",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write an efficient algorithm to check whether a given integer N is a prime number.",
+          "hint": "Check divisibility up to square root of N: for (int i = 2; i * i <= N; i++)."
+        },
+        {
+          "title": "Find Fibonacci Term Iteratively & Recursively",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a function to generate the N-th Fibonacci number. Compare the iterative O(N) time & O(1) space approach against simple recursion.",
+          "hint": "Iterative approach uses two variables (a=0, b=1) updated in a loop up to N."
+        },
+        {
+          "title": "Java Access Modifiers (public, private, protected, default)",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain the four access modifiers in Java: public, private, protected, and default (package-private), detailing their visibility across packages.",
+          "hint": "Private is class-only; Default is package-only; Protected is package + subclasses; Public is accessible everywhere."
+        },
+        {
+          "title": "Constructors in Java & Default Constructor Behavior",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "What is a Constructor in Java? Explain default constructor vs parameterized constructor and Constructor Overloading.",
+          "hint": "If no constructor is defined in a class, the Java compiler automatically inserts an explicit no-argument default constructor."
+        },
+        {
+          "title": "SQL SELECT DISTINCT & ORDER BY Query",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a SQL query to retrieve distinct job designations from an Employee table, sorted in alphabetical ascending order.",
+          "hint": "Use SELECT DISTINCT designation FROM Employee ORDER BY designation ASC."
+        },
+        {
+          "title": "DBMS Relational Model & Foreign Key Reference Integrity",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Explain Referential Integrity in DBMS. What happens when you attempt to delete a parent row referenced by child Foreign Keys?",
+          "hint": "Requires ON DELETE CASCADE, ON DELETE SET NULL, or throws a foreign key constraint violation error."
+        },
+        {
+          "title": "Operating Systems Deadlock Conditions",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "List the four necessary Coffman conditions required for a Deadlock to occur in an operating system.",
+          "hint": "Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait."
+        },
+        {
+          "title": "Computer Networks IP Address Classes & Port Numbers",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Differentiate between IPv4 Class A, Class B, and Class C addresses. What are well-known port numbers for HTTP, HTTPS, FTP, and SSH?",
+          "hint": "HTTP=80, HTTPS=443, FTP=21, SSH=22."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Average Calculation & New Entry Impact",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "The average weight of 24 students in a class is 45 kg. If the teacher's weight is included, the average weight increases by 1 kg. What is the teacher's weight?",
+          "options": ["70 kg", "68 kg", "72 kg", "65 kg"],
+          "hint": "Teacher's weight = New Average + (Old Count * Increase) = 46 + (24 * 1) = 70 kg."
+        },
+        {
+          "title": "Percentages & Discount Calculation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "A laptop originally priced at $800 is offered at successive discounts of 10% and 5%. What is the final selling price?",
+          "options": ["$684", "$700", "$680", "$690"],
+          "hint": "Price after 10% discount = 800 * 0.90 = $720. Price after 5% discount = 720 * 0.95 = $684."
+        },
+        {
+          "title": "Time & Work Pipes and Cisterns",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "Pipe A can fill a tank in 6 hours and Pipe B can empty the full tank in 12 hours. If both pipes are opened together, how long will it take to fill the tank?",
+          "options": ["12 hours", "8 hours", "10 hours", "15 hours"],
+          "hint": "Combined rate = 1/6 - 1/12 = 1/12 per hour. Time required = 12 hours."
+        },
+        {
+          "title": "Number Series Pattern Completion",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "Complete the series: 3, 6, 12, 24, 48, ?",
+          "options": ["96", "84", "72", "108"],
+          "hint": "Each term is doubled (multiplied by 2)."
+        },
+        {
+          "title": "Logical Reasoning Coding Decoding",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "If 'WIPRO' is coded as 'XJQSP', how is 'JAVA' coded in the same scheme?",
+          "options": ["KBWB", "KCWB", "LBWB", "KAWA"],
+          "hint": "Pattern: Each letter is incremented by +1 in alphabetical order."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your background, education, and interest in software development.",
+          "hint": "Keep it clear and enthusiastic: focus on degree, key technical skills, project participation, and readiness to learn."
+        },
+        {
+          "title": "Why Do You Want to Join Wipro?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Wipro?",
+          "hint": "Mention Wipro's global repute, inclusive corporate culture, training programs (like Elite/Turbo), and strong technology footprint."
+        },
+        {
+          "title": "Why Should We Hire You?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should Wipro select you over other candidates?",
+          "hint": "Highlight your strong fundamental understanding, quick learning agility, positive attitude, and commitment to project success."
+        },
+        {
+          "title": "Strengths and Weaknesses",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "What are your core strengths and an area of weakness you are actively working to improve?",
+          "hint": "Share a practical strength (e.g. perseverance, analytical thinking) and a genuine weakness with your proactive improvement plan."
+        },
+        {
+          "title": "Challenging Situation Handled",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Describe a challenging situation or obstacle you faced in your academics or project and how you resolved it.",
+          "hint": "Use STAR format: explain the obstacle, your initiative, team coordination, and positive outcome."
+        },
+        {
+          "title": "Willingness to Relocate",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Are you comfortable relocating to different Wipro office locations across India or working in shifts?",
+          "hint": "Confirm flexibility and eagerness for broader industry exposure."
+        },
+        {
+          "title": "Five-Year Career Goals",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Where do you see yourself professionally five years from now at Wipro?",
+          "hint": "Express intent to develop deep technical domain expertise, take on module responsibility, and contribute to client projects."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "name": "Cognizant (CTS)",
+  "difficulty": "Medium",
+  "categories": [
+    {
+      "name": "Technical",
+      "questions": [
+        {
+          "title": "Find First Non-Repeating Character in a String",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a function to find the first non-repeating character in a given string and return its index. If all characters repeat, return -1.",
+          "hint": "Use a frequency map or an integer array of size 256 to count occurrences in a first pass, then check the string sequentially."
+        },
+        {
+          "title": "Check for Balanced Parentheses in an Expression",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Given a string containing parentheses '()', '{}', and '[]', determine if the input string is valid and balanced.",
+          "hint": "Push opening brackets onto a Stack. When a closing bracket is encountered, check if it matches the top element of the Stack."
+        },
+        {
+          "title": "Java Interface vs Inheritance & Multiple Inheritance Workaround",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Why does Java not support multiple inheritance with classes? Explain how Java achieves multiple inheritance using interfaces and default methods.",
+          "hint": "Address the Diamond Problem where two parent classes define the same method signature."
+        },
+        {
+          "title": "SQL GROUP BY & HAVING Clause Aggregation",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Write a SQL query to display department IDs and the total number of employees in each department, showing only departments that have more than 5 employees.",
+          "hint": "Use SELECT dept_id, COUNT(*) FROM Employee GROUP BY dept_id HAVING COUNT(*) > 5."
+        },
+        {
+          "title": "DBMS ACID Properties & Transaction Consistency",
+          "type": "technical",
+          "difficulty": "Medium",
+          "problem_statement": "Explain the ACID (Atomicity, Consistency, Isolation, Durability) properties of database management systems with a bank transfer example.",
+          "hint": "Atomicity ensures all-or-nothing execution; Durability ensures committed changes survive system crashes."
+        },
+        {
+          "title": "Operating Systems Virtual Memory vs Physical RAM",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "What is Virtual Memory in operating systems? Explain how Paging and the Memory Management Unit (MMU) map virtual addresses to physical RAM frames.",
+          "hint": "Virtual memory provides an illusion of a large contiguous memory space using secondary storage swap space."
+        },
+        {
+          "title": "Computer Networks TCP vs UDP Protocols",
+          "type": "technical",
+          "difficulty": "Easy",
+          "problem_statement": "Differentiate between TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). Mention real-world applications for each.",
+          "hint": "TCP is connection-oriented and reliable (web, email); UDP is connectionless and fast (video streaming, gaming)."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": [
+        {
+          "title": "Profit and Loss Marked Price Discount",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "An article is sold at a discount of 15% on its marked price of $200. If the seller still makes a profit of 10%, what was the cost price of the article?",
+          "options": ["$154.55", "$170.00", "$160.00", "$145.45"],
+          "hint": "Selling Price = 200 * 0.85 = $170. Cost Price = 170 / 1.10 = $154.55."
+        },
+        {
+          "title": "Ages Ratio & Linear Equation",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "The present ratio of ages of A and B is 4:5. Six years hence, the ratio of their ages will become 5:6. What is the present age of A?",
+          "options": ["24 years", "20 years", "30 years", "18 years"],
+          "hint": "Let ages be 4x and 5x. (4x + 6) / (5x + 6) = 5/6 => 24x + 36 = 25x + 30 => x = 6. A's age = 24."
+        },
+        {
+          "title": "Speed, Distance & Relative Velocity",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "Two cars start from points X and Y (180 km apart) toward each other at speeds of 40 km/h and 50 km/h respectively. How long will it take for them to meet?",
+          "options": ["2.0 hours", "2.5 hours", "3.0 hours", "1.8 hours"],
+          "hint": "Relative speed when moving in opposite directions = 40 + 50 = 90 km/h. Time = Distance / Relative Speed = 180 / 90."
+        },
+        {
+          "title": "Logical Reasoning Syllogism",
+          "type": "aptitude",
+          "difficulty": "Easy",
+          "problem_statement": "Statements: 'All software is code. Some code is open-source.' Conclusions: I. Some software is open-source. II. All code is software.",
+          "options": ["Neither conclusion follows", "Only conclusion I follows", "Only conclusion II follows", "Both conclusions follow"],
+          "hint": "No direct intersection between software and open-source is guaranteed, and 'all software is code' does not imply 'all code is software'."
+        },
+        {
+          "title": "Probability Cards Selection",
+          "type": "aptitude",
+          "difficulty": "Medium",
+          "problem_statement": "From a standard deck of 52 cards, two cards are drawn at random without replacement. What is the probability that both cards drawn are Kings?",
+          "options": ["1/221", "1/169", "4/663", "1/26"],
+          "hint": "Probability = (4/52) * (3/51) = (1/13) * (1/17) = 1/221."
+        }
+      ]
+    },
+    {
+      "name": "HR Questions",
+      "questions": [
+        {
+          "title": "Tell Me About Yourself",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Tell me about yourself, your academic background, core technical skills, and key project experiences.",
+          "hint": "Deliver a concise elevator pitch covering degree specialization, programming skills, major project role, and career goals."
+        },
+        {
+          "title": "Why Do You Want to Join Cognizant?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why do you want to join Cognizant (CTS) specifically?",
+          "hint": "Highlight Cognizant's industry leadership in digital transformation, cloud services, continuous learning platforms, and employee growth."
+        },
+        {
+          "title": "Why Should We Hire You?",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Why should Cognizant hire you for a software engineering position?",
+          "hint": "Align your problem-solving capability, fast adaptability to new tech stacks, and team-player mindset with Cognizant's requirements."
+        },
+        {
+          "title": "Explain Your Final-Year Project",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "Explain your final-year academic project, architecture, and your individual contribution.",
+          "hint": "Detail the project objective, tech stack, your specific responsibilities, challenges overcome, and final achievements."
+        },
+        {
+          "title": "Motivation to Work in IT",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "What motivates you to pursue a long-term career in the IT industry?",
+          "hint": "Discuss passion for technology innovation, solving real-world business problems, and lifelong learning."
+        },
+        {
+          "title": "Handling Pressure and Tight Deadlines",
+          "type": "hr",
+          "difficulty": "Medium",
+          "problem_statement": "How do you handle high pressure, tight project deadlines, and unexpected technical hurdles?",
+          "hint": "Emphasize task prioritization, calm breakdown of issues, communication with mentors, and systematic execution."
+        },
+        {
+          "title": "Willingness to Relocate",
+          "type": "hr",
+          "difficulty": "Easy",
+          "problem_statement": "Are you willing to relocate to any Cognizant development center across India/globally?",
+          "hint": "Express clear willingness, enthusiasm for professional exposure, and flexibility."
+        }
+      ]
+    }
+  ]
+}
