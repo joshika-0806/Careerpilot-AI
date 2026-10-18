@@ -9,7 +9,10 @@ upload_bp = Blueprint("upload", __name__)
 
 BASE_UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = {'pdf', 'docx'}
-os.makedirs(BASE_UPLOAD_FOLDER, exist_ok=True)
+BASE_UPLOAD_FOLDER = (
+    "/tmp/uploads" if os.environ.get("VERCEL") else "uploads"
+)
+
 
 # Configuration: Toggle automatic deletion of raw resume files post-analysis
 DELETE_RESUME_AFTER_ANALYSIS = os.environ.get("DELETE_RESUME_AFTER_ANALYSIS", "false").lower() == "true"
