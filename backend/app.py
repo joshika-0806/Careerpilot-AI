@@ -50,16 +50,36 @@ app.extensions['limiter'] = limiter
 CORS(app, resources={r"/*": {"origins": "*"}}, allow_headers="*")
 
 # Ensure upload directory exists
-os.makedirs("uploads", exist_ok=True)
+UPLOAD_FOLDER = (
+    "/tmp/uploads" if os.environ.get("VERCEL") else "uploads"
+)
 
-# Register blueprints
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+# Health check endpoint
+@app.route("/health", methods=["GET"])
+@app.route("/api/health", methods=["GET"])
+def health_check():
+    return {"status": "ok", "backend": "connected"}, 200
+
+# Register blueprints (both standard and /api prefixed for flexible client routing)
 app.register_blueprint(upload_bp)
+app.register_blueprint(upload_bp, name="upload_api", url_prefix="/api")
+
 app.register_blueprint(analyze_bp)
+app.register_blueprint(analyze_bp, name="analyze_api", url_prefix="/api")
+
 app.register_blueprint(report_bp)
+app.register_blueprint(report_bp, name="report_api", url_prefix="/api")
+
 app.register_blueprint(verify_bp)
+app.register_blueprint(verify_bp, name="verify_api", url_prefix="/api")
+
 app.register_blueprint(interview_bp)
 app.register_blueprint(admin_bp)
+
 app.register_blueprint(user_bp)
+app.register_blueprint(user_bp, name="user_direct", url_prefix="/user")
 
 
 if __name__ == "__main__":
