@@ -7,11 +7,13 @@ from services.auth import require_auth
 
 upload_bp = Blueprint("upload", __name__)
 
-BASE_UPLOAD_FOLDER = "uploads"
 ALLOWED_EXTENSIONS = {'pdf', 'docx'}
+
 BASE_UPLOAD_FOLDER = (
     "/tmp/uploads" if os.environ.get("VERCEL") else "uploads"
 )
+)
+
 
 
 # Configuration: Toggle automatic deletion of raw resume files post-analysis
