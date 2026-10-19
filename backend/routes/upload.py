@@ -15,7 +15,6 @@ BASE_UPLOAD_FOLDER = (
 
 
 
-
 # Configuration: Toggle automatic deletion of raw resume files post-analysis
 DELETE_RESUME_AFTER_ANALYSIS = os.environ.get("DELETE_RESUME_AFTER_ANALYSIS", "false").lower() == "true"
 
