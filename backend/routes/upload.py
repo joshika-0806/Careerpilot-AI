@@ -12,7 +12,7 @@ ALLOWED_EXTENSIONS = {'pdf', 'docx'}
 BASE_UPLOAD_FOLDER = (
     "/tmp/uploads" if os.environ.get("VERCEL") else "uploads"
 )
-)
+
 
 
 
