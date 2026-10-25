@@ -4,6 +4,12 @@
 
 CareerPilot AI is a full-stack career acceleration platform powered by AI resume parsing, automated Applicant Tracking System (ATS) matching, cryptographic SHA-256 blockchain verification, and real-time user data synchronization via Firebase Admin SDK and Google Cloud Firestore.
 
+## Production deployment
+
+- **Application:** [Open CareerPilot AI](https://frontend-blue-ten-hshmcle3vo.vercel.app)
+- **Backend health:** [Check API status](https://careerpilot-api-buxu.onrender.com/health)
+- **Source code:** [GitHub repository](https://github.com/joshika-0806/Careerpilot-AI)
+
 ---
 
 ## 🏛 System Architecture

@@ -14,18 +14,18 @@ function ATSCard({ atsScore = 0, subScores = {}, jobRole = "" }) {
     score >= 80
       ? { label: "Excellent Match", cls: "excellent" }
       : score >= 50
-      ? { label: "Good Potential", cls: "good" }
-      : { label: "Needs Improvement", cls: "poor" };
+        ? { label: "Good Potential", cls: "good" }
+        : { label: "Needs Improvement", cls: "poor" };
 
   const badge = getBadge(atsScore);
   const color = getColor(atsScore);
 
   const bars = [
-    { label: "Keywords & Skills",    value: subScores.skills     ?? 0, max: 30 },
-    { label: "Experience Depth",     value: subScores.experience ?? 0, max: 20 },
-    { label: "Project Outcomes",     value: subScores.projects   ?? 0, max: 15 },
-    { label: "Academic Profile",     value: subScores.education  ?? 0, max: 15 },
-    { label: "Profile Completeness", value: subScores.profile    ?? 0, max: 20 },
+    { label: "Technical Skills", value: subScores.skills ?? 0, max: 30 },
+    { label: "Experience Depth", value: subScores.experience ?? 0, max: 20 },
+    { label: "Project Outcomes", value: subScores.projects ?? 0, max: 15 },
+    { label: "Academic Profile", value: subScores.education ?? 0, max: 15 },
+    { label: "Profile Completeness", value: subScores.profile ?? 0, max: 20 },
   ];
 
   return (

@@ -4,4 +4,33 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/upload': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/analyze': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/verify': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/report': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/user': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+    },
+  },
 })

@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { 
-  auth, 
-  onAuthStateChanged, 
-  signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword, 
+import {
+  auth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
   signOut,
   googleProvider,
-  signInWithPopup 
+  signInWithPopup
 } from "../services/firebase";
 
 const AuthContext = createContext();
@@ -42,11 +42,14 @@ export function AuthProvider({ children }) {
   const syncUserWithBackend = async (userObj, token) => {
     if (!userObj || !userObj.uid) return;
     try {
-      await fetch("http://localhost:5000/api/user/sync", {
+      const rawBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+      const apiBase = rawBase.replace(/\/$/, "");
+      const syncUrl = apiBase.endsWith("/api") ? `${apiBase}/user/sync` : `${apiBase}/api/user/sync`;
+      await fetch(syncUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token || ""}`,
+          "Authorization": `${token || ""}`,
           "X-User-UID": userObj.uid
         },
         body: JSON.stringify({
