@@ -4,6 +4,8 @@ import { uploadResume, analyzeResume } from "../services/api";
 import JobRoleDropDown from "./JobRoleDropDown";
 import { ShieldCheck } from "lucide-react";
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
 function UploadCard() {
   const [file, setFile] = useState(null);
   const [category, setCategory] = useState("");
@@ -12,6 +14,19 @@ function UploadCard() {
   const [loadingStep, setLoadingStep] = useState("");
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
+
+  const isValidFile = (candidate) => {
+    const extension = candidate.name.split(".").pop()?.toLowerCase();
+    if (!["pdf", "docx"].includes(extension)) {
+      alert("Please upload a PDF or DOCX file.");
+      return false;
+    }
+    if (candidate.size > MAX_FILE_SIZE) {
+      alert("The resume must be 5 MB or smaller.");
+      return false;
+    }
+    return true;
+  };
 
   // ── Drag handlers ───────────────────────────────────────────
   const handleDragOver = (e) => {
@@ -25,16 +40,14 @@ function UploadCard() {
     e.preventDefault();
     setIsDragging(false);
     const dropped = e.dataTransfer.files[0];
-    if (dropped && (dropped.name.endsWith(".pdf") || dropped.name.endsWith(".docx"))) {
+    if (dropped && isValidFile(dropped)) {
       setFile(dropped);
-    } else {
-      alert("Please upload a PDF or DOCX file.");
     }
   };
 
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
-    if (selected) setFile(selected);
+    if (selected && isValidFile(selected)) setFile(selected);
   };
 
   // ── Upload + Analyze ────────────────────────────────────────
@@ -61,7 +74,6 @@ function UploadCard() {
 
       if (!uploadRes.data.success) {
         alert(uploadRes.data.error || "Upload failed.");
-        setIsLoading(false);
         return;
       }
 
@@ -76,7 +88,6 @@ function UploadCard() {
 
       if (!report) {
         alert("Analysis failed. No report returned.");
-        setIsLoading(false);
         return;
       }
 
@@ -85,11 +96,22 @@ function UploadCard() {
 
     } catch (err) {
       console.error(err);
-      if (err.response?.data?.error) {
-        alert("Error: " + err.response.data.error);
+      const responseMessage =
+        err.response?.data?.error || err.response?.data?.message;
+      if (err.response) {
+        alert(
+          `Backend request failed (${err.response.status}): ${
+            responseMessage || "The server could not process the request."
+          }`
+        );
       } else {
-        alert("Could not connect to the backend. Make sure the server is running.");
+        const apiUrl =
+          import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+        alert(
+          `Could not reach the backend at ${apiUrl}. Check your connection and try again. If this is the first request in a while, the free backend may need up to a minute to wake up.`
+        );
       }
+    } finally {
       setIsLoading(false);
     }
   };
@@ -113,7 +135,7 @@ function UploadCard() {
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
-            onClick={() => !isLoading && fileInputRef.current.click()}
+            onClick={() => !isLoading && fileInputRef.current?.click()}
           >
             <span className="dropzone-icon">{file ? "✅" : "📂"}</span>
             {file ? (
