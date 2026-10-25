@@ -2,7 +2,6 @@ flask
 flask-cors
 PyMuPDF
 python-docx
-spacy
 Flask-limiter
 Flask-talisman
 Flask-SQLAlchemy
