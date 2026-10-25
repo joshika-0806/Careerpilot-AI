@@ -7,3 +7,4 @@ Flask-limiter
 Flask-talisman
 Flask-SQLAlchemy
 firebase-admin
+gunicorn
